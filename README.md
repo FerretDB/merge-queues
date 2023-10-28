@@ -1,2 +1,3 @@
 # merge-queues
 foo
+bar
