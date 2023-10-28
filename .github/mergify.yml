@@ -1,0 +1,10 @@
+---
+# see https://docs.mergify.com/
+
+pull_request_rules:
+  - name: "On conflict"
+    conditions:
+      - "conflict"
+    actions:
+      comment:
+        message: "@{{author}} this pull request has merge conflicts."
