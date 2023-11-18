@@ -1,10 +1,16 @@
 ---
-# see https://docs.mergify.com/
-
+# https://docs.mergify.com/configuration/file-format/#pull-request-rules
 pull_request_rules:
-  - name: "On conflict"
+  - name: "Conflict"
     conditions:
       - "conflict"
     actions:
       comment:
         message: "@{{author}} this pull request has merge conflicts."
+
+  - name: "Bad title"
+    conditions:
+      - "title ~= bad"
+    actions:
+      comment:
+        message: "'{{title}}' is a bad title."
